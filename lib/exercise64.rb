@@ -25,8 +25,10 @@ def fizz_buzz(num)
   elsif (num % 5).zero?
     'Buzz'
   else
-    num.to_s
+    num
   end
+rescue StandardError => e
+  puts e.message
 end
 
 # puts fizz_buzz(1)
